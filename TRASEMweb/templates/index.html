@@ -1,0 +1,95 @@
+{% extends "material/base.html" %}
+{% block content%}
+<head>
+ 
+  <title>TRASEM</title>
+
+</head>
+<body>
+  <!-- <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav> -->
+  
+  <div class="section" style="padding-top: 0 !important;">
+      <nav class="">
+          <div class="nav-wrapper indigo darken-4">
+            <a href="#!" class="brand-logo" style="margin: 0 0 0 15px;">TRASEM</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="sass.html">Página 1</a></li>
+              <li><a href="badges.html">Página 2</a></li>
+              <li><a href="collapsible.html">Página 3</a></li>
+              <li><a href="mobile.html">Página 4</a></li>
+            </ul>
+          </div>
+        </nav>
+      
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="sass.html">Página 1</a></li>
+          <li><a href="badges.html">Página 2</a></li>
+          <li><a href="collapsible.html">Página 3</a></li>
+          <li><a href="mobile.html">Página 4</a></li>
+        </ul>
+
+        </div>
+        <div class="" id="index-banner">
+          <div class="container">
+            <div class="row center">
+              <div class="col s12 ">
+                <div class="card">
+                  <div class="card-image">
+                    <img class="" style="width: 620px;height: 480px ; margin:0 0 0 9em;"  src="{{ url_for('video_feed') }}">
+                    <span class="card-title" style="margin:0 0 0 9em;">Video Prueba</span>
+
+                  </div>
+                  <div class="card-content">
+                    <h3>Texto Traducido</h3>
+                  </div>
+                  <div class="card-action">
+                    <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;" >play_arrow</i>Iniciar Grabación</a>
+                    <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;">stop</i>Detener Grabación</a>
+                    <a  href="#" class="center " style="font-size: 20px;color: black;"> Escuchar<i class="material-icons">hearing</i></a>
+                    <a  href="#" class="center " style="font-size: 20px;color: black;">Historial<i class="material-icons">comment</i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+      <!-- <div class="row center" style="border-color: black; border-style: solid;">
+          <img class="responsive-img"  style="height: 40ex;" src="images/bufalo.png">
+      </div>
+      
+      <div class="row center " style="border-color: black; border-style: solid; height:auto;">
+        <h3 style="margin: 10px">  Texto Traducido</h3>
+      </div>
+      <div class="row">
+          <div class="col s12 m5 offset-m1">
+            <div class="icon-block">
+              <a  href="#" class="center " style="font-size: 50px;color: black;"> Escuchar<i class="material-icons">hearing</i></a>
+            </div>
+          </div>
+  
+          <div class="col s12 m5 offser-m1">
+            <div class="icon-block">
+              <a  href="#" class="center " style="font-size: 50px;color: black;">Historial<i class="material-icons">comment</i></a>
+            </div>
+          </div>
+        
+        </div> -->
+
+    </div>
+  </div>
+  </body>
+{% endblock%}
+{%block scripts%}
+  {{super ()}}
+    <script type="text/javascript"></script>
+{%endblock%}

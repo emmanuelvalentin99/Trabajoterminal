@@ -1,9 +1,13 @@
-{% extends "material/base.html" %}
-{% block content%}
+<!DOCTYPE html>
+<html>
 <head>
- 
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>TRASEM</title>
-
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" media='screen' href='../static/css/materialize.css'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
 </head>
 <body>
   <!-- <nav class="light-blue lighten-1" role="navigation">
@@ -47,7 +51,9 @@
               <div class="col s12 ">
                 <div class="card">
                   <div class="card-image">
-                    <img class="" style="width: 620px;height: 480px ; margin:0 0 0 9em;"  src="{{ url_for('video_feed') }}">
+                    <!-- style="min-width: 620px;min-height: 480px ; margin:0 0 0 9em;" -->
+                    <img class="responsive-img"  src="{{ url_for('video_feed') }}">
+                    
                     <span class="card-title" style="margin:0 0 0 9em;">Video Prueba</span>
 
                   </div>
@@ -55,8 +61,8 @@
                     <h3>Texto Traducido</h3>
                   </div>
                   <div class="card-action">
-                    <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;" >play_arrow</i>Iniciar Grabación</a>
-                    <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;">stop</i>Detener Grabación</a>
+                      <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;" >play_arrow</i>Iniciar Grabación</a>
+                      <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;">stop</i>Detener Grabación</a>
                     <a  href="#" class="center " style="font-size: 20px;color: black;"> Escuchar<i class="material-icons">hearing</i></a>
                     <a  href="#" class="center " style="font-size: 20px;color: black;">Historial<i class="material-icons">comment</i></a>
                   </div>
@@ -88,8 +94,6 @@
     </div>
   </div>
   </body>
-{% endblock%}
-{%block scripts%}
-  {{super ()}}
-    <script type="text/javascript"></script>
-{%endblock%}
+  <script src='../static/js/materialize.js'></script>
+</html>>
+

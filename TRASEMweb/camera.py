@@ -18,15 +18,35 @@ import cv2
 from base_camera import BaseCamera
 
 class Camera(BaseCamera):
+    
     @staticmethod
     def frames():
         camera = cv2.VideoCapture(0)
+        fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+        out = cv2.VideoWriter('./static/video.avi',fourcc, 20.0, (640,480))
         if not camera.isOpened():
             raise RuntimeError('Could not start camera.')
 
         while True:
             # read current frame
             _, img = camera.read()
+            out.write(img)
+            # encode as a png image and return it
+            yield cv2.imencode('.png', img)[1].tobytes()
+        out.release()       
+    '''
+    def init_record():
+        camera = cv2.VideoCapture(0)
+        fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+        out = cv2.VideoWriter('./static/video.avi',fourcc, 20.0, (640,480))
+        if not camera.isOpened():
+            raise RuntimeError('Could not start camera.')
 
-            # encode as a jpeg image and return it
-            yield cv2.imencode('.jpg', img)[1].tobytes()
+        while True:
+            # read current frame
+            _, img = camera.read()
+            out.write(img)
+            # encode as a png image and return it
+            yield cv2.imencode('.png', img)[1].tobytes()
+        out.release()
+    '''

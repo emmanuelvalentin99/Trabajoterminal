@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <title>TRASEM</title>
-
-  <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" media='screen' href="{{ url_for('static',filename='css/materialize.css') }}">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
 </head>
 <body>
   <!-- <nav class="light-blue lighten-1" role="navigation">
@@ -52,18 +51,33 @@
               <div class="col s12 ">
                 <div class="card">
                   <div class="card-image">
-                    <img class="" style="width: 620px;height: 480px ; margin:0 0 0 9em;"  src="images/bufalo.png">
-                    <span class="card-title" style="margin:0 0 0 9em;">Video Prueba</span>
+                    <!-- style="min-width: 620px;min-height: 480px ; margin:0 0 0 9em;"  class="responsive-img"-->
+                    <div class="col s2">
+
+                    </div>
+                    <img style="width: 620px;height: 480px ;"   src="{{ url_for('video_viewer') }}">
+                    
+                    <span class="card-title" style="margin: 0 0 0 9rem" >Video Prueba</span>
+                    
 
                   </div>
                   <div class="card-content">
                     <h3>Texto Traducido</h3>
                   </div>
                   <div class="card-action">
-                    <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;" >play_arrow</i>Iniciar Grabación</a>
-                    <a  href="#" class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;">stop</i>Detener Grabación</a>
-                    <a  href="#" class="center " style="font-size: 20px;color: black;"> Escuchar<i class="material-icons">hearing</i></a>
-                    <a  href="#" class="center " style="font-size: 20px;color: black;">Historial<i class="material-icons">comment</i></a>
+                    
+                        <a id="record"  class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;" >play_arrow</i>Iniciar Grabación</a>
+                        <a  id="stop"  class="center " style="font-size: 20px;color: black;"><i class="material-icons" style="font-size: 30px;">stop</i>Detener Grabación</a>
+                    
+                    <div class="divider"></div>
+                    
+                        <a  href="#" class="center " style="font-size: 20px;color: black;">Traducir<i class="material-icons">g_translate</i></a>
+                        <a  href="#" class="center " style="font-size: 20px;color: black;"> Escuchar<i class="material-icons">hearing</i></a>
+                        <a  href="#" class="center " style="font-size: 20px;color: black;">Historial<i class="material-icons">comment</i></a>
+                        
+                        
+                    
+                    
                   </div>
                 </div>
               </div>
@@ -92,12 +106,8 @@
 
     </div>
   </div>
-  <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
-  <script type="Javascript">
-      
-  </script>
   </body>
-</html>
+  <script src="{{ url_for('static',filename='js/materialize.js') }}"></script>
+  <script src="{{ url_for('static', filename='recorder.js') }}"></script>
+</html>>
+
